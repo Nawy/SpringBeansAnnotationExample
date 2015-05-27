@@ -1,5 +1,5 @@
 # SpringBeansAnnotationExample
-This's project shows examples of AspectJ, Spring Bean Annotation and Java Based Configuration
+This's project shows examples of AspectJ, Spring Bean Annotation and Java Based Configuration.
 
 Can you answer: "Why both person have the same address?" After all we created two address beans(addr1 and addr2) with various cities and countries.
 
