@@ -22,6 +22,7 @@ public class AppConfig {
 	}
 	
 	@Bean(name = "address")
+	@Scope("singleton")
 	public Address address()
 	{
 		return new Address();

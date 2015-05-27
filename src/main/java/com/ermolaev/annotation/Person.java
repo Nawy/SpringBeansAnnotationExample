@@ -36,7 +36,7 @@ public class Person {
 	
 	public void destroy()
 	{
-		System.out.println("Person: destroy(" + firstName + " " + lastName + ")");
+		System.out.println("\nPerson: destroy(" + firstName + " " + lastName + ")");
 	}
 	
 	public void print()
