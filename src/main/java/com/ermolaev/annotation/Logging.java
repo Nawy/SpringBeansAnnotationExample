@@ -10,7 +10,7 @@ public class Logging {
 	@Before("execution(* com.ermolaev.annotation.Address.set*(..))")
 	public void beforeAddressSet()
 	{
-		System.out.println("Before address set method invoked!");
+		System.out.print("Before address set method invoked!");
 	}
 	
 	@Pointcut("execution(* com.ermolaev.annotation.*.print(..))")
@@ -22,19 +22,22 @@ public class Logging {
 		System.out.print("print {\n");
 		
 		spaceCount += 1;
-		for(int i = 0; i < spaceCount; i++)
-			System.out.print("\t");
+		this.printSpaces(spaceCount);
 	}
 	
 	@After("printAll()")
 	public void afterAnyPrint()
 	{
 		spaceCount -= 1;
-		for(int i = 0; i < spaceCount; i++)
-			System.out.print("\t");
+		this.printSpaces(spaceCount);
 		
 		System.out.print("}\n");
 		
+		this.printSpaces(spaceCount);
+	}
+	
+	private void printSpaces(int count)
+	{
 		for(int i = 0; i < spaceCount; i++)
 			System.out.print("\t");
 	}
